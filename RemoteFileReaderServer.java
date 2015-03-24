@@ -17,13 +17,14 @@ public class RemoteFileReaderServer {
             System.out.println("RemoteFileReader Server ready.");
             
             // Periodic thread to prune expired open files
-            Timer timer = new Timer();
+            // TODO: to be enabled based on configuration
+            /*Timer timer = new Timer();
             timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
                     fileReader.pruneExpiredOpenFiles();      
                 }
-            }, 0, PRUNE_PERIOD);
+            }, 0, PRUNE_PERIOD);*/
             
         } catch (RemoteException e) {
             System.out.println("Exception in RemoteFileReaderImpl.main: " + e);
