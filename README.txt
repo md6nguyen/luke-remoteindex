@@ -6,8 +6,9 @@ This plugin has been tested with luke-4.0.0-ALPHA using JDK 1.7
 I. Build the Luke jar file:
 ==========================
 Download Luke source code for luke-4.0.0-ALPHA from https://code.google.com/p/luke/downloads/list. Unpack the 
-luke-src-4.0.0-ALPHA.tgz file to the directory luke-4.0.0-ALPHA. Go to luke-4.0.0-ALPHA and build Luke jar file 
-that includes the plugin luke-remoteindex as follows:
+luke-src-4.0.0-ALPHA.tgz file to the directory luke-4.0.0-ALPHA.
+
+Go to luke-4.0.0-ALPHA and build Luke jar file that includes the plugin luke-remoteindex as follows:
 
 1. First copy luke-remoteindex/*.java to src/org/getopt/luke/plugins and copy luke-remoteindex/remoteindex.xml to src/xml
 2. ant clean
@@ -24,6 +25,7 @@ II. Start Agent on Remote Host:
 ==============================
 Copy lukeall-4.0.0-ALPHA.jar to the remote host having the Lucene index you wish to browse. From the remote host, 
 start the agent RemoteFileReaderServer as follows:
+
 1. export CLASSPATH=.:<absolute path for lukeall-4.0.0-ALPHA.jar>
 2. rmiregistry &
 3. java org.getopt.luke.plugins.RemoteFileReaderServer
